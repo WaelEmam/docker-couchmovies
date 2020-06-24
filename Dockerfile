@@ -1,6 +1,6 @@
 #Couchmovies Application Server
 FROM couchbase:latest
-MAINTAINER craig.kovar@couchbase.com
+MAINTAINER wael@couchbase.com
 
 RUN apt-get update
 RUN apt-get -y  install git sudo
