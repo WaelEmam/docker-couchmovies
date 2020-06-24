@@ -79,6 +79,8 @@ couchbase-cli user-manage -c ${CB_SERVER}:8091 -u ${CB_USER} \
  -p ${CB_PASSWORD} --set --rbac-username ${CB_TWEET_TARGET_BUCKET} --rbac-password password \
  --rbac-name "tweettarget" --roles bucket_full_access[${CB_TWEET_TARGET_BUCKET}] \
  --auth-domain local
+echo "waiting for 120 seconds"
+sleep 120
 
 mv /couchmovies/src/main/resources/application.properties /couchmovies/src/main/resources/application.properties.bkup
 echo "spring.couchbase.bootstrap-hosts=${CB_SERVER}" > /couchmovies/src/main/resources/application.properties
